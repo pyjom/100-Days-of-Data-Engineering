@@ -51,19 +51,20 @@ if __name__ == '__main__':
     bad = Player('Master BOT')
 
     for i in range(5):
-        good_hand = input('Please choose [R]ock, [P]aper, [S]cissor.')
+        good_hand = input('Please choose [R]ock, [P]aper, [S]cissor: ')
         bad_hand = options[randint(0,2)] # 0,1,2 yung pipiliin in random, based ito sa index ng r,s,p
 
-        print('Player selected: ' + )
+        #print('Player selected: ' + options_dict[good_hand])
 
         # making the desicion whoever wins
+        
+        good_hand = options_dict[good_hand.lower()[0]]
+        bad_hand = options_dict[bad_hand.lower()[0]]
         status = decision(good_hand, bad_hand)
-        good_hand = options_dict[good_hand]
-        bad_hand = options_dict[bad_hand]
 
         print('You have selected: ' + good_hand)
         sleep(2)
-        print('Master BOT selected: '+ bad_hand)
+        print('Master BOT selected: '+ options_dict[bad_hand])
 
         if status == 'You win':
             good.score +=1
