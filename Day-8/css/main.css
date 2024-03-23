@@ -1,6 +1,5 @@
 body {
-  background: blue;
+  img{
+    width: 100%;
+  }
 }
-body p {
-  font-weight: bold;
-}/*# sourceMappingURL=main.css.map */
